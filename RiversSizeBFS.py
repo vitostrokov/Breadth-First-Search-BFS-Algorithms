@@ -18,7 +18,8 @@ def riversize(matrix):
                     counter += 1    #   inrementing length of the current river
                     #   marking brancg as visited
                     visited[current] = True 
-                    ii = current[0] # tuple's 1st ids
+                    # tuple's 1st ids
+                    ii = current[0] 
                     jj = current[1] # tuple's 2nd ids
                     #   if current branch connected has 1 as its neighbor, appending neighbor to the queue
                     if ii-1 >= 0 and matrix[ii-1][jj] == 1 and (ii-1, jj) not in visited:
