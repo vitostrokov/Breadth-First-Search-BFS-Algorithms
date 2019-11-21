@@ -8,7 +8,7 @@ def riversize(matrix):
         for j in range(len(matrix[0])):
             #   skip 0 elements at current idx, and visited idxs
             if matrix[i][j] != 0 and (i,j) not in visited:
-                q.append((i,j)) #   appending idx of next appeared 1          
+                q.append((i,j)) #   appending idx of next appeared 1           
                 counter = 0 #   reseting river size counter to 0 to start count for next river
             #   while q is not empty, keep checking all river branches
             while len(q) > 0:
@@ -16,7 +16,8 @@ def riversize(matrix):
                 #   checking if branch has been visited or not                 
                 if current not in visited:
                     counter += 1    #   inrementing length of the current river
-                    visited[current] = True #   marking brancg as visited
+                    #   marking brancg as visited
+                    visited[current] = True 
                     ii = current[0] # tuple's 1st ids
                     jj = current[1] # tuple's 2nd ids
                     #   if current branch connected has 1 as its neighbor, appending neighbor to the queue
